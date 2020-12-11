@@ -1,0 +1,115 @@
+#!/bin/bash
+# From https://gitlab.com/dwt1/dotfiles/-/tree/master/.dmenu
+# Dmenu script for quick bookmarked files
+
+# Here you can declare the options of your files
+
+declare options=("Habits
+Notes
+Github
+Gmail
+Outlook
+Slack
+Protonmail
+News
+Platzi
+Udemy
+Coursera
+LinkedIn
+Figma
+Weather
+Calendar
+Discord
+Lbry
+Reddit
+Mangadex
+Drive
+Docs
+Slides
+WebWhatsapp
+Quit")
+
+# Call Dmenu
+choice=$(echo -e "${options[@]}" | dmenu -i -p 'Web Bookmarks: ')
+
+# The choices and the path of each file
+case "$choice" in
+Quit)
+	echo "Program terminated." && exit 1
+	;;
+Habits)
+	choice="https://www.notion.so/miguelravila/Habits-02489d71ed3d4edfb6a4db65082be4e2"
+	;;
+Notes)
+	choice="https://www.notion.so/miguelravila/5529796dc3964eba9884d79d84c85071?v=9bfce8bd09ec4002875dbf1b69700cff"
+	;;
+Github)
+	choice="https://github.com/"
+	;;
+Gmail)
+	choice="https://mail.google.com/mail/u/0/#inbox"
+	;;
+Outlook)
+	choice="https://outlook.live.com/mail/0/inbox"
+	;;
+Protonmail)
+	choice="https://mail.protonmail.com/inbox"
+	;;
+Slack)
+	choice="https://poofmat.slack.com/"
+	;;
+News)
+	choice="https://news.ycombinator.com/"
+	;;
+Platzi)
+	choice="https://platzi.com/home"
+	;;
+Udemy)
+	choice="https://www.udemy.com/"
+	;;
+Coursera)
+	choice="https://www.coursera.org/"
+	;;
+LinkedIn)
+	choice="https://www.linkedin.com/"
+	;;
+Figma)
+	choice="https://www.figma.com/files/recent"
+	;;
+Weather)
+	choice="https://www.google.com/search?client=firefox-b-d&q=weather"
+	;;
+Calendar)
+	choice="https://calendar.google.com/calendar/u/0/r"
+	;;
+Discord)
+	choice="https://discord.com/app"
+	;;
+Lbry)
+	choice="https://lbry.tv/$/following"
+	;;
+Redit)
+	choice="https://www.reddit.com/"
+	;;
+Mangadex)
+	choice="https://mangadex.org/follows"
+	;;
+Drive)
+	choice="https://drive.google.com/"
+	;;
+Docs)
+	choice="https://docs.google.com/"
+	;;
+Slides)
+	choice="https://docs.google.com/presentation/u/0/"
+	;;
+WebWhatsapp)
+	choice="https://web.whatsapp.com/"
+	;;
+*)
+	exit 1
+	;;
+esac
+#Open the bookmark
+xdg-open "${choice}" 2>/dev/null
+exec i3-msg [class="^firefox$"] focus

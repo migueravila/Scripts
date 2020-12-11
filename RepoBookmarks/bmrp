@@ -1,0 +1,53 @@
+#!/bin/bash
+# From https://gitlab.com/dwt1/dotfiles/-/tree/master/.dmenu
+# Dmenu script for quick bookmarked files
+
+# Here you can declare the options of your files
+declare options=("Dmenu
+Dotfiles
+Fetch
+Gtk
+Scripts
+St
+Startpage
+VsCode
+Quit")
+
+# Call Dmenu
+choice=$(echo -e "${options[@]}" | dmenu -i -p 'Open config file: ')
+
+# The choices and the path of each file
+case "$choice" in
+Quit)
+	echo "Program terminated." && exit 1
+	;;
+Dmenu)
+	choice="$HOME/Workspace/Personal/Dmenu"
+	;;
+Dotfiles)
+	choice="$HOME/Workspace/Personal/Dotfiles"
+	;;
+Fetch)
+	choice="$HOME/Workspace/Personal/Fetch"
+	;;
+Gtk)
+	choice="$HOME/Workspace/Personal/Gtk"
+	;;
+Scripts)
+	choice="$HOME/Workspace/Personal/Scripts"
+	;;
+St)
+	choice="$HOME/Workspace/Personal/St"
+	;;
+Startpage)
+	choice="$HOME/Workspace/Personal/Startpage"
+	;;
+VsCode)
+	choice="$HOME/Workspace/Personal/VsCode"
+	;;
+*)
+	exit 1
+	;;
+esac
+#Call terminal emulator and open the file
+code $choice
