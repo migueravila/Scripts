@@ -26,7 +26,8 @@ Mangadex
 Drive
 Docs
 Slides
-WebWhatsapp
+Whatsapp
+Translate
 Quit")
 
 # Call Dmenu
@@ -103,8 +104,11 @@ Docs)
 Slides)
 	choice="https://docs.google.com/presentation/u/0/"
 	;;
-WebWhatsapp)
+Whatsapp)
 	choice="https://web.whatsapp.com/"
+	;;
+Translate)
+	choice="https://translate.google.com.mx/"
 	;;
 *)
 	exit 1
