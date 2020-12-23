@@ -10,7 +10,7 @@ Github
 Gmail
 Outlook
 Slack
-Protonmail
+Proton
 News
 Platzi
 Udemy
@@ -28,6 +28,10 @@ Docs
 Slides
 Whatsapp
 Translate
+Netflix
+Disney
+Feed
+Twitter
 Quit")
 
 # Call Dmenu
@@ -53,8 +57,8 @@ Gmail)
 Outlook)
 	choice="https://outlook.live.com/mail/0/inbox"
 	;;
-Protonmail)
-	choice="https://mail.protonmail.com/inbox"
+Proton)
+	choice="https://beta.protonmail.com/u/0/inbox"
 	;;
 Slack)
 	choice="https://poofmat.slack.com/"
@@ -109,6 +113,18 @@ Whatsapp)
 	;;
 Translate)
 	choice="https://translate.google.com.mx/"
+	;;
+Netflix)
+	choice="https://www.netflix.com/browse"
+	;;
+Disney)
+	choice="https://www.disneyplus.com/home"
+	;;
+Feed)
+	choice="https://feedly.com/i/my"
+	;;
+Twitter)
+	choice="https://twitter.com/home"
 	;;
 *)
 	exit 1
