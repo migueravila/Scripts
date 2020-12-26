@@ -32,6 +32,7 @@ Netflix
 Disney
 Feed
 Twitter
+Medium
 Quit")
 
 # Call Dmenu
@@ -125,6 +126,9 @@ Feed)
 	;;
 Twitter)
 	choice="https://twitter.com/home"
+	;;
+Medium)
+	choice="https://medium.com/"
 	;;
 *)
 	exit 1
