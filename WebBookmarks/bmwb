@@ -94,7 +94,7 @@ Discord)
 Lbry)
 	choice="https://lbry.tv/$/following"
 	;;
-Redit)
+Reddit)
 	choice="https://www.reddit.com/"
 	;;
 Mangadex)
