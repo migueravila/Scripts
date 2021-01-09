@@ -10,12 +10,10 @@ Images
 Documents
 Videos
 Config
-School
-Firefox
 Quit")
 
 # Call Dmenu
-choice=$(echo -e "${options[@]}" | dmenu -i -p 'Folders Bookmarks: ')
+choice=$(echo -e "${options[@]}" | dmenu -i -p 'Where? ')
 
 # The choices and the path of each file
 case "$choice" in
@@ -23,7 +21,7 @@ case "$choice" in
 		echo "Program terminated." && exit 1
 	;;
 	Workspace)
-		choice="$HOME/Workspace"
+		choice="$HOME/Public"
 	;;
 	Screenshots)
 		choice="$HOME/Pictures/Screenshots"
@@ -43,16 +41,10 @@ case "$choice" in
 	Config)
 		choice="$HOME/.config"
 	;;
-	School)
-		choice="$HOME/Documents/Files/School"
-	;;
-	Firefox)
-		choice="$HOME/.mozilla/firefox/mbckotg9.default-release/chrome"
-	;;
 	*)
 		exit 1
 	;;
 esac
 #Call terminal emulator and open the file
-pcmanfm $choice
+thunar $choice
 
