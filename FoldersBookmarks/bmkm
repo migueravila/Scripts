@@ -8,12 +8,14 @@ Screenshots
 Downloads
 Images
 Documents
+Notes
+Journal
 Videos
 Config
 Quit")
 
 # Call Dmenu
-choice=$(echo -e "${options[@]}" | dmenu -i -p 'Where? ')
+choice=$(echo -e "${options[@]}" | dmenu -i -p 'Where do you want to go? ')
 
 # The choices and the path of each file
 case "$choice" in

@@ -1,0 +1,29 @@
+#!/bin/bash
+
+# Settings
+EDITOR="nvim"
+JOURROOT="~/Documents/Journal"
+EXTENSION="md"
+
+
+#AND HERE WE GO
+
+#For four-digit year folders, change the +%y to +%Y
+THISYEAR=$(/bin/date +%y)
+THISMON=$(/bin/date +%m)
+THISDATE=$(/bin/date +%d)
+DESPACED=${1// /-}
+TITLE=$(/bin/echo "$DESPACED" | /usr/bin/tr -cd '[[:alnum:]].-')
+NOWISH=$(/bin/date +%H%M)
+JOURDIR="$JOURROOT/$THISYEAR/$THISMON"
+
+if [ -z "$TITLE" ]
+then
+    TITLE="$NOWISH"
+else
+    TITLE="$NOWISH-$TITLE"
+fi
+
+mkdir -p $JOURDIR
+cd $JOURDIR
+$EDITOR $THISMON-$THISDATE-$TITLE.$EXTENSION
