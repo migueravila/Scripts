@@ -54,7 +54,7 @@ case "$choice" in
 		choice="$HOME/.zshrc"
 	;;
 	Alias)
-		choice="$HOME/.zshrc"
+		choice="$HOME/.scripts/alias"
 	;;
 	*)
 		exit 1
