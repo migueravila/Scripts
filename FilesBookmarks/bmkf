@@ -9,9 +9,10 @@ Barworkspace
 Alacritty
 Dunst
 Picom
-st
-zsh
-dmenu
+St
+Zsh
+Alias
+Dmenu
 quit")
 
 # Call Dmenu
@@ -29,7 +30,7 @@ case "$choice" in
 		choice="$HOME/.config/dunst/dunstrc"
 	;;
 	i3)
-		choice="$HOME/.config/i3/config"
+		choice="$HOME/.i3/config"
 	;;
 	Neovim)
 		choice="$HOME/.config/nvim/init.vim"
@@ -43,13 +44,16 @@ case "$choice" in
 	Picom)
 		choice="$HOME/.config/picom/picom.conf"
 	;;
-	st)
-		choice="$HOME/Workspace/Personal/St/config.h"
+	St)
+		choice="$HOME/Public/Personal/St/config.h"
 	;;
-	dmenu)
-		choice="$HOME/Workspace/Personal/Dmenu/config.h"
+	Dmenu)
+		choice="$HOME/Public/Personal/Dmenu/config.h"
 	;;
-	zsh)
+	Zsh)
+		choice="$HOME/.zshrc"
+	;;
+	Alias)
 		choice="$HOME/.zshrc"
 	;;
 	*)
