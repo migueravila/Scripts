@@ -30,7 +30,7 @@ case "$choice" in
 		choice="$HOME/.config/dunst/dunstrc"
 	;;
 	i3)
-		choice="$HOME/.i3/config"
+		choice="$HOME/.config/i3/config"
 	;;
 	Neovim)
 		choice="$HOME/.config/nvim/init.vim"
