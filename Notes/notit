@@ -4,7 +4,7 @@ cd ~/Workspace/Personal/Notes
 pwd
 
 git add .
-git commit -m 'Added new notes'
+git commit -m '📚 Added new notes'
 git push
 
 c0='[0m'
