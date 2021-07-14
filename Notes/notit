@@ -1,0 +1,25 @@
+#! /bin/sh
+
+cd ~/Workspace/Personal/Notes
+pwd
+
+git add .
+git commit -m 'Added new notes'
+git push
+
+c0='[0m'
+c1='[31m'; c2='[32m'
+c3='[33m'; c4='[34m'
+c5='[35m'; c6='[36m'
+c7='[37m'; c8='[38m'
+c9='^[[37m'
+
+# Get user
+user="Miguel"
+
+# Print
+cat <<-EOF
+
+ ${c2}${user} ${c0}pushed to ${c3}Notes ${c0}successfully.
+
+EOF
